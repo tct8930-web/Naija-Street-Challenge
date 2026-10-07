@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Naija Street Challenge 🇳🇬</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen">
+            <div class="flag">🇳🇬</div>
+
+            <h1>Naija Street<br>Challenge</h1>
+
+            <p class="subtitle">
+                How long can you survive?
+            </p>
+
+            <div class="instructions">
+                <p>🏃 Move left and right</p>
+                <p>🚗 Avoid the cars</p>
+                <p>🕳️ Avoid the potholes</p>
+                <p>🪙 Collect coins</p>
+            </div>
+
+            <button id="startButton" class="main-button">
+                ▶ PLAY GAME
+            </button>
+        </div>
+
+
+        <!-- Game Screen -->
+        <div id="gameScreen" class="screen hidden">
+
+            <div class="top-bar">
+                <div>
+                    <span>🏆 Score</span>
+                    <strong id="score">0</strong>
+                </div>
+
+                <div>
+                    <span>🪙 Coins</span>
+                    <strong id="coins">0</strong>
+                </div>
+
+                <div>
+                    <span>🏃 Distance</span>
+                    <strong id="distance">0m</strong>
+                </div>
+            </div>
+
+
+            <div id="gameArea">
+
+                <div class="sky"></div>
+
+                <div class="buildings">
+                    🏢 🏠 🏢 🏠 🏢
+                </div>
+
+                <div class="road">
+
+                    <div class="road-line line1"></div>
+                    <div class="road-line line2"></div>
+                    <div class="road-line line3"></div>
+
+                    <div id="player" class="player">
+                        🏃
+                    </div>
+
+                    <div id="obstacleContainer"></div>
+
+                    <div id="coinContainer"></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="controls">
+
+                <button id="leftButton" class="control-button">
+                    ◀
+                </button>
+
+                <button id="jumpButton" class="control-button jump">
+                    ⬆ JUMP
+                </button>
+
+                <button id="rightButton" class="control-button">
+                    ▶
+                </button>
+
+            </div>
+
+            <p class="mobile-tip">
+                Use the buttons or keyboard ← → ↑
+            </p>
+
+        </div>
+
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="screen hidden">
+
+            <div class="game-over-icon">
+                💥
+            </div>
+
+            <h2>GAME OVER</h2>
+
+            <p>You survived the Naija street!</p>
+
+            <div class="results">
+
+                <div>
+                    <span>Score</span>
+                    <strong id="finalScore">0</strong>
+                </div>
+
+                <div>
+                    <span>Coins</span>
+                    <strong id="finalCoins">0</strong>
+                </div>
+
+                <div>
+                    <span>Distance</span>
+                    <strong id="finalDistance">0m</strong>
+                </div>
+
+            </div>
+
+            <p id="bestScoreText" class="best-score">
+                🏆 Best Score: 0
+            </p>
+
+            <button id="restartButton" class="main-button">
+                🔄 PLAY AGAIN
+            </button>
+
+            <button id="homeButton" class="secondary-button">
+                🏠 HOME
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="game.js"></script>
+
+</body>
+</html>
+`
